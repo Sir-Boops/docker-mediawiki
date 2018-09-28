@@ -8,6 +8,7 @@ RUN cd /opt && \
     rm -rf www && \
     mv mediawiki-$WIKI_VER www && \
     cd www && \
+    echo "DirectoryIndex index.php" > .htaccess && \
     rm -rf mw-config && \
     cd /opt && \
     rm mediawiki-$WIKI_VER.tar.gz
